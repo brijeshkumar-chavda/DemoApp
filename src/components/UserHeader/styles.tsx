@@ -5,9 +5,15 @@ import { fontSize, fontWeight } from '../../constants/fonts';
 
 export const styles = StyleSheet.create({
   container: {
+    flex: 0,
+    flexDirection: 'row',
+    alignItems: 'center',
+    // backgroundColor: colors.testBackground,
+  },
+
+  textContainer: {
+    marginLeft: 12,
     flex: 1,
-    alignItems: 'flex-start',
-    backgroundColor: colors.background,
   },
 
   userImage: {

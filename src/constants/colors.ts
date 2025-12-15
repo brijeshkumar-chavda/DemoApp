@@ -1,6 +1,7 @@
 export const colors = {
   accentColor: '#AE7F5A',
   white: '#FFFFFF',
+  testBackground: '#6ba3f1ff',
   black: '#000000',
   primary: '#007AFF', // Example blue
   secondary: '#5856D6',
