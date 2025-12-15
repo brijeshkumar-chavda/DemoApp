@@ -30,6 +30,8 @@ export const styles = StyleSheet.create({
     width: 50,
     height: 50,
     borderRadius: 12,
+    borderWidth: 2,
+    borderColor: colors.black,
   },
 
   userName: {

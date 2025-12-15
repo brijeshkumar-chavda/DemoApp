@@ -41,8 +41,8 @@ export const styles = StyleSheet.create({
   rewardMoneyContainer: {
     flexDirection: 'row',
     alignItems: 'center',
-    justifyContent: 'flex-end',
     padding: 12,
+    // TODO: Ask sir why justifyContent: 'flex-end', is not working
     marginLeft: 'auto',
   },
 
