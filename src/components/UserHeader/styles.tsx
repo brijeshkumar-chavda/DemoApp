@@ -5,13 +5,23 @@ import { fontSize, fontWeight } from '../../constants/fonts';
 
 export const styles = StyleSheet.create({
   container: {
-    flex: 0,
     flexDirection: 'row',
     alignItems: 'center',
-    // backgroundColor: colors.testBackground,
   },
 
-  textContainer: {
+  backButtonContainer: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    marginRight: 12,
+  },
+
+  iconContainer: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: 18,
+  },
+
+  userDetails: {
     marginLeft: 12,
     flex: 1,
   },
