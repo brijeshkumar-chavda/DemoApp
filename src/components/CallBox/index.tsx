@@ -5,10 +5,16 @@ import { colors } from '../../constants/colors';
 
 type Props = {
   isMine?: boolean;
-  // callType: 'audio' | 'video';
+  callType: 'audio' | 'video';
 };
 
 const CallBox = (props: Props) => {
+  const isVideo = props.callType === 'video';
+  const iconName = isVideo ? 'videocam' : 'call';
+  const title = isVideo ? 'Video Call' : 'Audio Call';
+  const rewardMoney = isVideo ? '60' : '10';
+  const callTime = isVideo ? '60min' : '10min';
+
   return (
     <View
       style={props.isMine ? styles.sentContainer : styles.receivedContainer}
@@ -21,28 +27,20 @@ const CallBox = (props: Props) => {
         ]}
       >
         <MaterialIcons
-          name="call"
+          name={iconName}
           size={24}
           color={props.isMine ? colors.black : colors.white}
         />
       </View>
 
       <View style={styles.callDetails}>
-        <Text style={styles.callName}>Audio Call</Text>
-        <Text style={styles.callTime}>10 mins</Text>
+        <Text style={styles.callName}>{title}</Text>
+        <Text style={styles.callTime}>{callTime}</Text>
       </View>
-
-      {/* {props.isMine ? (
-      ) : (
-        <View style={styles.callDetails}>
-          <Text style={styles.callName}>Video Call</Text>
-          <Text style={styles.callTime}>10 mins</Text>
-        </View>
-      )} */}
 
       <View style={styles.rewardMoneyContainer}>
         <MaterialIcons name="currency-rupee" size={24} color={colors.black} />
-        <Text style={styles.rewardMoneyText}>10</Text>
+        <Text style={styles.rewardMoneyText}>{rewardMoney}</Text>
       </View>
     </View>
   );
