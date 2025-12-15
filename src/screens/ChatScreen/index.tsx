@@ -11,7 +11,8 @@ const ChatScreen = () => {
     <SafeAreaView style={styles.container}>
       <UserHeader />
       <AudioCallBox />
-      <MessageBox />
+      <MessageBox message="I need help for my react native project." />
+      <MessageBox isMine message="Sure, I can help you with that!" />
     </SafeAreaView>
   );
 };

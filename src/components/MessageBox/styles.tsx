@@ -9,5 +9,14 @@ export const styles = StyleSheet.create({
     padding: 12,
     flexDirection: 'row',
     alignItems: 'center',
+    marginBottom: 12,
+  },
+  receivedMessage: {
+    backgroundColor: colors.white,
+    alignSelf: 'flex-start',
+  },
+  sentMessage: {
+    backgroundColor: colors.accentColor,
+    alignSelf: 'flex-end',
   },
 });

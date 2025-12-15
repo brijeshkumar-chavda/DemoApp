@@ -10,8 +10,9 @@ export const styles = StyleSheet.create({
     borderWidth: 1,
     padding: 12,
     flexDirection: 'row',
-    alignItems: 'center',
+    alignSelf: 'flex-end',
     gap: 12,
+    marginBottom: 12,
   },
 
   audioCallIconContainer: {

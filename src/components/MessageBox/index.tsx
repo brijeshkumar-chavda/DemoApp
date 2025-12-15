@@ -1,10 +1,20 @@
 import { Text, View } from 'react-native';
 import { styles } from './styles';
 
-const MessageBox = () => {
+type Props = {
+  isMine?: boolean;
+  message: string;
+};
+
+const MessageBox = (props: Props) => {
   return (
-    <View style={styles.container}>
-      <Text>I need help for my react native project.</Text>
+    <View
+      style={[
+        styles.container,
+        props.isMine ? styles.sentMessage : styles.receivedMessage,
+      ]}
+    >
+      <Text>{props.message}</Text>
     </View>
   );
 };
