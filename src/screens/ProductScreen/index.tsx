@@ -1,9 +1,38 @@
-import { Text, View } from 'react-native';
+import React, { useEffect, useState } from 'react';
+import { Text, View, FlatList, ActivityIndicator } from 'react-native';
 import { styles } from './styles';
 import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
 import { colors } from '../../constants/colors';
+import ProductCard from '../../components/ProductCard';
+
+interface Product {
+  id: number;
+  title: string;
+  price: number;
+  image: string;
+}
 
 const ProductScreen = () => {
+  const [products, setProducts] = useState<Product[]>([]);
+  const [isLoading, setIsLoading] = useState(true);
+
+  useEffect(() => {
+    fetch('https://fakestoreapi.com/products')
+      .then(res => res.json())
+      .then(json => {
+        setProducts(json);
+        setIsLoading(false);
+      })
+      .catch(error => {
+        console.error(error);
+        setIsLoading(false);
+      });
+  }, []);
+
+  const renderProductItem = ({ item }: { item: Product }) => (
+    <ProductCard title={item.title} price={item.price} image={item.image} />
+  );
+
   return (
     <View style={styles.container}>
       <View style={styles.shoppingCartIconContainer}>
@@ -11,9 +40,23 @@ const ProductScreen = () => {
       </View>
 
       <View>
-        <Text style={styles.productMainTitle}>Watches</Text>
-        <Text style={styles.productSubTitle}>Wrist Watches</Text>
+        <Text style={styles.productMainTitle}>Shop</Text>
+        <Text style={styles.productSubTitle}>Product List</Text>
       </View>
+
+      {isLoading ? (
+        <ActivityIndicator size="large" color={colors.accentColor} />
+      ) : (
+        <FlatList
+          data={products}
+          renderItem={renderProductItem}
+          keyExtractor={item => item.id.toString()}
+          showsVerticalScrollIndicator={false}
+          contentContainerStyle={{ paddingBottom: 20 }}
+          numColumns={2}
+          columnWrapperStyle={{ justifyContent: 'space-between' }}
+        />
+      )}
     </View>
   );
 };

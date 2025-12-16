@@ -24,5 +24,6 @@ export const styles = StyleSheet.create({
   productSubTitle: {
     fontSize: fontSize.xxlarge,
     fontWeight: fontWeight.bold,
+    marginBottom: 16,
   },
 });
