@@ -10,5 +10,5 @@ export const colors = {
   placeholder: '#A1A1A1',
   error: '#FF3B30',
   success: '#34C759',
-  border: '#E0E0E0',
+  border: '#000',
 };
