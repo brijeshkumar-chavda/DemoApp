@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { View, Button } from 'react-native';
+import { View, Button, Text } from 'react-native';
 import { styles } from './styles';
 import { TextInput } from 'react-native';
 import { colors } from '../../constants/colors';
@@ -10,6 +10,7 @@ const LoginScreen = () => {
 
   return (
     <View style={styles.container}>
+      <Text style={styles.title}>Welcome to Demo App</Text>
       <TextInput
         value={email}
         onChangeText={setEmail}

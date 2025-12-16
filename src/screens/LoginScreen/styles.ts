@@ -1,5 +1,6 @@
 import { StyleSheet } from 'react-native';
 import { colors } from '../../constants/colors';
+import { fontSize, fontWeight } from '../../constants/fonts';
 
 export const styles = StyleSheet.create({
   container: {
@@ -8,9 +9,16 @@ export const styles = StyleSheet.create({
     backgroundColor: colors.background,
     padding: 16,
   },
+
+  title: {
+    fontSize: fontSize.xlarge,
+    fontWeight: fontWeight.bold,
+    marginBottom: 16,
+  },
+
   text: {
-    fontSize: 20,
-    fontWeight: 'bold',
+    fontSize: fontSize.medium,
+    fontWeight: fontWeight.bold,
   },
   textInput: {
     height: 50,
