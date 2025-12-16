@@ -3,10 +3,12 @@ import { View, Button, Text } from 'react-native';
 import { styles } from './styles';
 import { TextInput } from 'react-native';
 import { colors } from '../../constants/colors';
+import { useNavigation } from '@react-navigation/native';
 
 const LoginScreen = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
+  const navigation = useNavigation<any>();
 
   return (
     <View style={styles.container}>
@@ -25,9 +27,17 @@ const LoginScreen = () => {
         style={styles.textInput}
         placeholderTextColor={colors.placeholder}
       />
-      <Button title="Login" onPress={() => {}} color={colors.accentColor} />
+      <Button
+        title="Login"
+        onPress={() => navigation.navigate('ChatScreen')}
+        color={colors.accentColor}
+      />
       <View style={styles.buttonSpacer}>
-        <Button title="Sign Up" onPress={() => {}} color={colors.accentColor} />
+        <Button
+          title="Sign Up"
+          onPress={() => navigation.navigate('SignUpScreen')}
+          color={colors.accentColor}
+        />
       </View>
     </View>
   );

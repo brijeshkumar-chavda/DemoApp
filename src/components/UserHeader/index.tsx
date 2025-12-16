@@ -1,14 +1,19 @@
-import { Image, Text, View } from 'react-native';
+import { Image, Text, View, TouchableOpacity } from 'react-native';
 import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
+import { useNavigation } from '@react-navigation/native';
 import { colors } from '../../constants/colors';
 import { styles } from './styles';
 
 const UserHeader = () => {
+  const navigation = useNavigation();
   return (
     <View style={styles.container}>
-      <View style={styles.backButtonContainer}>
+      <TouchableOpacity
+        onPress={() => navigation.goBack()}
+        style={styles.backButtonContainer}
+      >
         <MaterialIcons name="arrow-back" size={24} color={colors.black} />
-      </View>
+      </TouchableOpacity>
       <Image
         source={require('../../assets/images/user_image.png')}
         style={styles.userImage}
