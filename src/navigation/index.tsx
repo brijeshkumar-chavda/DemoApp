@@ -4,9 +4,10 @@ import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import LoginScreen from '../screens/LoginScreen';
 import ChatScreen from '../screens/ChatScreen';
 import SignUpScreen from '../screens/SignUpScreen';
+import ProductScreen from '../screens/ProductScreen';
 
 const RootStack = createNativeStackNavigator({
-  initialRouteName: 'LoginScreen',
+  initialRouteName: 'ProductScreen',
   screens: {
     LoginScreen: {
       screen: LoginScreen,
@@ -22,6 +23,12 @@ const RootStack = createNativeStackNavigator({
     },
     ChatScreen: {
       screen: ChatScreen,
+      options: {
+        headerShown: false,
+      },
+    },
+    ProductScreen: {
+      screen: ProductScreen,
       options: {
         headerShown: false,
       },

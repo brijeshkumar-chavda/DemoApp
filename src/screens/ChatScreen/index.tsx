@@ -1,5 +1,4 @@
-import { Text } from 'react-native';
-import { SafeAreaView } from 'react-native-safe-area-context';
+import { Text, View } from 'react-native';
 import UserHeader from '../../components/UserHeader';
 
 import { styles } from './styles';
@@ -9,7 +8,7 @@ import MessageInputBox from '../../components/MessageInputBox';
 
 const ChatScreen = () => {
   return (
-    <SafeAreaView style={styles.container}>
+    <View style={styles.container}>
       <UserHeader />
       <CallBox isMine callType="audio" />
       <CallBox callType="audio" />
@@ -19,7 +18,7 @@ const ChatScreen = () => {
       <MessageBox isMine message="Sure, I can help you with that!" />
       <CallBox callType="video" />
       <MessageInputBox />
-    </SafeAreaView>
+    </View>
   );
 };
 

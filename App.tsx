@@ -1,11 +1,13 @@
-import { SafeAreaProvider } from 'react-native-safe-area-context';
+import { SafeAreaProvider, SafeAreaView } from 'react-native-safe-area-context';
 
 import Navigation from './src/navigation';
 
 function App() {
   return (
     <SafeAreaProvider>
-      <Navigation />
+      <SafeAreaView style={{ flex: 1 }}>
+        <Navigation />
+      </SafeAreaView>
     </SafeAreaProvider>
   );
 }
