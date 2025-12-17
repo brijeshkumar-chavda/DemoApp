@@ -1,4 +1,4 @@
-import { Text, View } from 'react-native';
+import { View } from 'react-native';
 import UserHeader from '../../components/UserHeader';
 
 import { styles } from './styles';

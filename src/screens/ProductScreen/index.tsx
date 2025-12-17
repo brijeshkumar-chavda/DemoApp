@@ -52,9 +52,9 @@ const ProductScreen = () => {
           renderItem={renderProductItem}
           keyExtractor={item => item.id.toString()}
           showsVerticalScrollIndicator={false}
-          contentContainerStyle={{ paddingBottom: 20 }}
+          contentContainerStyle={styles.listContent}
           numColumns={2}
-          columnWrapperStyle={{ justifyContent: 'space-between' }}
+          columnWrapperStyle={styles.columnWrapper}
         />
       )}
     </View>

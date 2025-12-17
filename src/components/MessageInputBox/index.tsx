@@ -1,4 +1,4 @@
-import { Text, View } from 'react-native';
+import { View } from 'react-native';
 import { TextInput } from 'react-native';
 import { styles } from './styles';
 import MaterialIcons from 'react-native-vector-icons/MaterialIcons';

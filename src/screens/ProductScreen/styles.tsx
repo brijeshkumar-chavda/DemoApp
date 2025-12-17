@@ -26,4 +26,12 @@ export const styles = StyleSheet.create({
     fontWeight: fontWeight.bold,
     marginBottom: 16,
   },
+
+  listContent: {
+    paddingBottom: 20,
+  },
+
+  columnWrapper: {
+    justifyContent: 'space-between',
+  },
 });
