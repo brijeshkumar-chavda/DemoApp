@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "458665561368",
+    "project_id": "fir-app-18001",
+    "storage_bucket": "fir-app-18001.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:458665561368:android:054f42768f71f10572626d",
+        "android_client_info": {
+          "package_name": "com.brijesh.demo_app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD6CmvWji-XduwPOMcvvM1Ie6GuGNP3Qto"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
