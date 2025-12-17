@@ -78,9 +78,9 @@ android {
     buildToolsVersion rootProject.ext.buildToolsVersion
     compileSdk rootProject.ext.compileSdkVersion
 
-    namespace "com.demoapp"
+    namespace "com.brijesh.demo_app"
     defaultConfig {
-        applicationId "com.demoapp"
+        applicationId "com.brijesh.demo_app"
         minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdkVersion
         versionCode 1
