@@ -5,8 +5,6 @@ export const styles = StyleSheet.create({
   container: {
     flex: 1,
     padding: 16,
-    // justifyContent: 'center',
-    // alignItems: 'center',
   },
 
   shoppingCartIconContainer: {
@@ -27,11 +25,7 @@ export const styles = StyleSheet.create({
     marginBottom: 16,
   },
 
-  listContent: {
-    paddingBottom: 20,
-  },
-
-  columnWrapper: {
+  productGridRowSpace: {
     justifyContent: 'space-between',
   },
 });

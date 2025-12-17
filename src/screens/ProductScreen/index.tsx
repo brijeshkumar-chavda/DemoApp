@@ -17,16 +17,19 @@ const ProductScreen = () => {
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
-    fetch('https://fakestoreapi.com/products')
-      .then(res => res.json())
-      .then(json => {
+    const fetchProducts = async () => {
+      try {
+        const result = await fetch('https://fakestoreapi.com/products');
+        const json = await result.json();
         setProducts(json);
-        setIsLoading(false);
-      })
-      .catch(error => {
+      } catch (error) {
         console.error(error);
+      } finally {
         setIsLoading(false);
-      });
+      }
+    };
+
+    fetchProducts();
   }, []);
 
   const renderProductItem = ({ item }: { item: Product }) => (
@@ -50,11 +53,8 @@ const ProductScreen = () => {
         <FlatList
           data={products}
           renderItem={renderProductItem}
-          keyExtractor={item => item.id.toString()}
-          showsVerticalScrollIndicator={false}
-          contentContainerStyle={styles.listContent}
           numColumns={2}
-          columnWrapperStyle={styles.columnWrapper}
+          columnWrapperStyle={styles.productGridRowSpace}
         />
       )}
     </View>
