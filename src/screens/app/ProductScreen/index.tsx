@@ -2,8 +2,8 @@ import React, { useEffect, useState } from 'react';
 import { Text, View, FlatList, ActivityIndicator } from 'react-native';
 import { styles } from './styles';
 import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
-import { colors } from '../../constants/colors';
-import ProductCard from '../../components/ProductCard';
+import { colors } from '../../../constants/colors';
+import ProductCard from '../../../components/ProductCard';
 
 interface Product {
   id: number;

@@ -2,8 +2,8 @@ import React, { useState } from 'react';
 import { View, Text, TextInput, Button, Alert } from 'react-native';
 import { styles } from './styles';
 import { useNavigation } from '@react-navigation/native';
-import { addUser } from '../../utils/userManager';
-import { colors } from '../../constants/colors';
+import { addUser } from '../../../utils/userManager';
+import { colors } from '../../../constants/colors';
 
 const SignUpScreen = () => {
   const [email, setEmail] = useState('');

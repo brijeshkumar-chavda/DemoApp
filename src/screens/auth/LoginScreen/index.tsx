@@ -1,11 +1,9 @@
-import React, { useState } from 'react';
-import { View, Button, Text } from 'react-native';
-import { styles } from './styles';
-import { TextInput } from 'react-native';
-import { colors } from '../../constants/colors';
 import { useNavigation } from '@react-navigation/native';
-import { validateUser } from '../../utils/userManager';
-import { Alert } from 'react-native';
+import React, { useState } from 'react';
+import { Alert, Button, Text, TextInput, View } from 'react-native';
+import { colors } from '../../../constants/colors';
+import { validateUser } from '../../../utils/userManager';
+import { styles } from './styles';
 
 const LoginScreen = () => {
   const [email, setEmail] = useState('');

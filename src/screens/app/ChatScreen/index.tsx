@@ -1,10 +1,10 @@
 import { View } from 'react-native';
-import UserHeader from '../../components/UserHeader';
+import UserHeader from '../../../components/UserHeader';
 
+import CallBox from '../../../components/CallBox';
+import MessageBox from '../../../components/MessageBox';
+import MessageInputBox from '../../../components/MessageInputBox';
 import { styles } from './styles';
-import CallBox from '../../components/CallBox';
-import MessageBox from '../../components/MessageBox';
-import MessageInputBox from '../../components/MessageInputBox';
 
 const ChatScreen = () => {
   return (

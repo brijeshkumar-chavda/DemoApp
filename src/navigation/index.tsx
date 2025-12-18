@@ -1,10 +1,10 @@
 import { createStaticNavigation } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 
-import LoginScreen from '../screens/LoginScreen';
-import ChatScreen from '../screens/ChatScreen';
-import SignUpScreen from '../screens/SignUpScreen';
-import ProductScreen from '../screens/ProductScreen';
+import LoginScreen from '../screens/auth/LoginScreen';
+import ChatScreen from '../screens/app/ChatScreen';
+import SignUpScreen from '../screens/auth/SignUpScreen';
+import ProductScreen from '../screens/app/ProductScreen';
 
 const RootStack = createNativeStackNavigator({
   initialRouteName: 'ProductScreen',
