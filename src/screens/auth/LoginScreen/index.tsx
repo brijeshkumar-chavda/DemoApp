@@ -5,6 +5,7 @@ import { colors } from '../../../constants/colors';
 import { validateUser } from '../../../utils/userManager';
 import { styles } from './styles';
 import CustomButton from '../../../components/CustomButton';
+import CustomInput from '../../../components/CustomInput';
 
 const LoginScreen = () => {
   const [email, setEmail] = useState('');
@@ -31,19 +32,16 @@ const LoginScreen = () => {
   return (
     <View style={styles.container}>
       <Text style={styles.title}>Welcome to Demo App</Text>
-      <TextInput
+      <CustomInput
         value={email}
         onChangeText={setEmail}
         placeholder="Enter email address"
-        style={styles.textInput}
-        placeholderTextColor={colors.placeholder}
       />
-      <TextInput
+      <CustomInput
         value={password}
         onChangeText={setPassword}
         placeholder="Enter password"
-        style={styles.textInput}
-        placeholderTextColor={colors.placeholder}
+        secureTextEntry
       />
 
       <CustomButton title="Login" onPress={handleLogin} />

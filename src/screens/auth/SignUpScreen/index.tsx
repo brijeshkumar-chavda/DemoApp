@@ -1,13 +1,16 @@
-import React, { useState } from 'react';
-import { View, Text, TextInput, Button, Alert } from 'react-native';
-import { styles } from './styles';
 import { useNavigation } from '@react-navigation/native';
+import React, { useState } from 'react';
+import { Alert, Text, View } from 'react-native';
+import CustomButton from '../../../components/CustomButton';
+import CustomInput from '../../../components/CustomInput';
 import { addUser } from '../../../utils/userManager';
-import { colors } from '../../../constants/colors';
+import { styles } from './styles';
 
 const SignUpScreen = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
+  const [firstName, setFirstName] = useState('');
+  const [lastName, setLastName] = useState('');
   const navigation = useNavigation<any>();
 
   const handleSignUp = () => {
@@ -30,30 +33,33 @@ const SignUpScreen = () => {
   return (
     <View style={styles.container}>
       <Text style={styles.title}>Create Account</Text>
-      <TextInput
+
+      <CustomInput
+        value={firstName}
+        onChangeText={setFirstName}
+        placeholder="First Name"
+      />
+      <CustomInput
+        value={lastName}
+        onChangeText={setLastName}
+        placeholder="Last Name"
+      />
+      <CustomInput
         value={email}
         onChangeText={setEmail}
         placeholder="Enter email address"
-        style={styles.textInput}
-        placeholderTextColor={colors.placeholder}
       />
-      <TextInput
+      <CustomInput
         value={password}
         onChangeText={setPassword}
         placeholder="Enter password"
-        style={styles.textInput}
-        placeholderTextColor={colors.placeholder}
+        secureTextEntry
       />
-      <Button
-        title="Sign Up"
-        onPress={handleSignUp}
-        color={colors.accentColor}
-      />
+      <CustomButton title="Sign Up" onPress={handleSignUp} />
       <View style={styles.buttonSpacer}>
-        <Button
+        <CustomButton
           title="Back to Login"
           onPress={() => navigation.navigate('LoginScreen')}
-          color={colors.accentColor}
         />
       </View>
     </View>
