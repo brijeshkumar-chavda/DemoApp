@@ -4,6 +4,7 @@ import { Alert, Button, Text, TextInput, View } from 'react-native';
 import { colors } from '../../../constants/colors';
 import { validateUser } from '../../../utils/userManager';
 import { styles } from './styles';
+import CustomButton from '../../../components/CustomButton';
 
 const LoginScreen = () => {
   const [email, setEmail] = useState('');
@@ -44,12 +45,12 @@ const LoginScreen = () => {
         style={styles.textInput}
         placeholderTextColor={colors.placeholder}
       />
-      <Button title="Login" onPress={handleLogin} color={colors.accentColor} />
+
+      <CustomButton title="Login" onPress={handleLogin} />
       <View style={styles.buttonSpacer}>
-        <Button
+        <CustomButton
           title="Sign Up"
           onPress={() => navigation.navigate('SignUpScreen')}
-          color={colors.accentColor}
         />
       </View>
     </View>

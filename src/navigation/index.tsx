@@ -7,7 +7,7 @@ import SignUpScreen from '../screens/auth/SignUpScreen';
 import ProductScreen from '../screens/app/ProductScreen';
 
 const RootStack = createNativeStackNavigator({
-  initialRouteName: 'ProductScreen',
+  initialRouteName: 'LoginScreen',
   screens: {
     LoginScreen: {
       screen: LoginScreen,
